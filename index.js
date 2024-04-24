@@ -178,7 +178,7 @@ function scrollToTop() {
 async function searchCity() {
   try {
   const response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${searchInput.value}&lang=sv`
+    `s://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${searchInput.value}&lang=sv`
   );
   const data = await response.json();
 
@@ -318,7 +318,7 @@ async function getHomeCity() {
   try {
   const city = localStorage.getItem("homeCity");
   const response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
+    `s://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
   );
   const data = await response.json();
 
@@ -440,7 +440,7 @@ const fetchFavourites = async () => {
   if (favourites !== null) {
     const promises = JSON.parse(favourites).map(async (favourite) => {
       const getFavourites = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=c16f3924032646cc966121030233110&q=${favourite}&lang=sv`
+        `s://api.weatherapi.com/v1/forecast.json?key=c16f3924032646cc966121030233110&q=${favourite}&lang=sv`
       );
       const res = await getFavourites.json();
       favouriteArrayData.push(res);
@@ -673,7 +673,7 @@ async function setHeroImage() {
   try {
   const city = localStorage.getItem("lastDisplayed");
   const response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
+    `s://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
   );
   const data = await response.json();
   const hero = document.getElementById("hero");
@@ -963,7 +963,7 @@ const weatherInfoAndDisplay = async (apiKey, lastDisplayed) => {
 
     try {
         const response = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
+            `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
         );
         const data = await response.json();
 
@@ -1126,7 +1126,7 @@ const weatherInfoAndDisplay = async (apiKey, lastDisplayed) => {
 
     try {
         const response1 = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
+            `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
         );
         const data1 = await response1.json();
 
