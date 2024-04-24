@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Länkar till Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Väderkollen</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <nav class="navbar">
+                <img src="" alt="">
+                <a id="väderkollen" href="/index.html">
+                    <p id="title">Väderkollen</p>
+                </a>
+                <button class="lista" id="lista">☰</button>
+                <ul class="länkar" id="länkar">
+                    <li><a href="/forecast.html">Väderprognos</a></li>
+                    <li><a href="/contact.html">Kontakta Oss</a></li>
+                    <li><a href="#">Nyheter</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <main>
+        <div id="wrapper">
+            <section id="hero-container">
+                <div id="hero">
+                    <div id="hero-city" class="hero-item">
+                    </div>
+                    <div id="hero-condition" class="hero-item">
+                        <div id="hero-condition-text">
+                        </div>
+                        <div id="hero-condition-icon">
+                        </div>
+                    </div>
+                    <div id="hero-uv-index" class="hero-item">
+                        <div id="hero-uv-index-icon">
+                            <img src="/img/icons/ultraviolet.png" alt="uv index" class="uv-icon">
+                        </div>
+                        <div id="hero-uv-index-text">
+                        </div>
+                    </div>
+                    <div id="hero-humidity" class="hero-item">
+                        <div id="hero-humidity-icon">
+                            <img src="/img/icons/water.png" alt="humidity" class="humidity-icon">
+                        </div>
+                        <div id="hero-humidity-text"></div>
+                    </div>
+                    <div id="hero-temp" class="hero-item">
+                    </div>
+                    <div id="hero-feelslike" class="hero-item">
+                    </div>
+                </div>
+            </section>
+            <section id="current-pos-container">
+                <button id="view-current-pos" class="current-pos-button"><img id="pos-btn-icon"
+                        src="/img/icons/location.png" alt="home" class="current-pos-icon"><span id="pos-btn-text">Visa
+                        nuvarande position</span></button>
+            </section>
+            <section id="button-container">
+                <div id="home-btn-container">
+                    <button id="set-home" class="webstrg-btn"><img src="/img/icons/home.png" alt="home"
+                            class="webstrg-icon"><span id="home-btn-text">Ange som hemort</span></button>
+                </div>
+                <div id="fav-btn-container">
+                    <button id="set-favourite" class="webstrg-btn"><img id="fav-btn-icon" src="/img/icons/favourite.png"
+                            alt="favourite" class="webstrg-icon"><span id="fav-btn-text">Lägg till i
+                            favoriter</span></button>
+                </div>
+            </section>
+            <section id="search-container">
+                <input type="search" name="search" id="search" placeholder="Sök" autocomplete="off">
+                <button id="search-btn" type="submit"><img id="search-btn-icon" src="/img/icons/search-arrow.png"
+                        alt=""></button>
+            </section>
+            <section id="weather-today-text">
+                <p>Vädret idag</p>
+            </section>
+            <section id="searched-city-container">
+                <div id="grid">
+                    <div id="item-1">
+                        <p></p>
+                    </div>
+                    <div id="item-2">
+                        <p></p>
+                    </div>
+                    <div id="item-3">
+                        <p></p>
+                    </div>
+                </div>
+                <div id="arrow-box-down">
+                    <img id="down-arrow" src="img/icons/Arrow-down.png" alt="Neråtpil">
+                </div>
+                <div id="dropdown-menu">
+                    <ul id="dropdown-menu-1">
+                    </ul>
+                    <div class="weather-box">
+                        <div id="item-4">
+                            <p></p>
+                            <img id="dailyIMG" src="" alt="Väderikon">
+                        </div>
+                        <div id="item-5">
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div id="item-6">
+                            <img src="//cdn.weatherapi.com/weather/64x64/day/296.png" alt="Väderikon">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div id="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tid</th>
+                                    <th>Väder</th>
+                                    <th>Temp</th>
+                                    <th>Nederbörd</th>
+                                    <th>Vind M/S</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-output">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <section id="chart-container">
+                    </section>
+                    <div id="arrow-box-up">
+                        <img id="up-arrow" src="img/icons/Arrow-up.png" alt="Uppåtpil">
+                    </div>
+                </div>
+            </section>
+            <section id="current-city-forecast">
+                <a id="city-forecast-text" href="forecast.html"></a>
+                <img src="img/icons/search-arrow.png" alt="">
+            </section>
+            <section id="favourites-text">
+                <p>Favoriter</p>
+            </section>
+            <section id="new-favourites-list">
+
+            </section>
+            <section id="favourites-list">
+
+            </section>
+        </div>
+    </main>
+    <section id="footer">
+        <footer>
+            <!-- Denn länk måste vara med i footern för att vi ska kunna använda UV ikonen i heron -->
+            <ul>
+                <li><a target="_blank" href="https://icons8.com/icon/Hyvx4ElXq9X4/uv-index">Uv Index</a> icon by <a
+                        target="_blank" href="https://icons8.com">Icons8</a></li>
+                <li><a href="https://www.flaticon.com/free-icons/humid" title="humid icons">Humid icons created by
+                        Creative Squad -
+                        Flaticon</a></li>
+                <li><a target="_blank" href="https://icons8.com/icon/2797/home">Home</a> icon by <a target="_blank"
+                        href="https://icons8.com">Icons8</a></li>
+                <li><a target="_blank" href="https://icons8.com/icon/7856/star">Star</a> icon by <a target="_blank"
+                        href="https://icons8.com">Icons8</a></li>
+                <li><a target="_blank" href="https://icons8.com/icon/3723/location">Location</a> icon by <a
+                        target="_blank" href="https://icons8.com">Icons8</a></li>
+                <li><a target="_blank" href="https://icons8.com/icon/39969/right-arrow">Arrow</a> icon by <a
+                        target="_blank" href="https://icons8.com">Icons8</a></li>
+            </ul>
+            <p>&copy Max, Jens och Elias 2023</p>
+        </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
