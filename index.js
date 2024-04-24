@@ -440,7 +440,7 @@ const fetchFavourites = async () => {
   if (favourites !== null) {
     const promises = JSON.parse(favourites).map(async (favourite) => {
       const getFavourites = await fetch(
-        `s://api.weatherapi.com/v1/forecast.json?key=c16f3924032646cc966121030233110&q=${favourite}&lang=sv`
+        `https://api.weatherapi.com/v1/forecast.json?key=c16f3924032646cc966121030233110&q=${favourite}&lang=sv`
       );
       const res = await getFavourites.json();
       favouriteArrayData.push(res);
@@ -673,7 +673,7 @@ async function setHeroImage() {
   try {
   const city = localStorage.getItem("lastDisplayed");
   const response = await fetch(
-    `s://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
+    `https://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
   );
   const data = await response.json();
   const hero = document.getElementById("hero");
