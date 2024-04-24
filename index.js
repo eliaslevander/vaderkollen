@@ -447,10 +447,8 @@ const fetchFavourites = async () => {
     });
     await Promise.all(promises);
     const mappedFavourites = favouriteArrayData.map((data) => {
-      console.log(data);
       const favUlList = document.getElementsByClassName("fav-dropdown-menu-1");
       const favLocation = data.location.name;
-      console.log("Här är felet för stadens namn");
       const favCondition = data.current.condition.text;
       const favTemperature = data.current.temp_c;
       const favIcon = data.current.condition.icon;
