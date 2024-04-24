@@ -178,7 +178,7 @@ function scrollToTop() {
 async function searchCity() {
   try {
   const response = await fetch(
-    `s://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${searchInput.value}&lang=sv`
+    `https://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${searchInput.value}&lang=sv`
   );
   const data = await response.json();
 
