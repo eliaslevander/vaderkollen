@@ -32,7 +32,7 @@ const ulList = document.getElementById('dropdown-list-1');
 const forecastToday = async (apiKey, lastDisplayed) => {
     try {
         const response = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
+            `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
         );
         const data = await response.json();
         //hämtar data från api:n och sätter in i <p> taggar
@@ -117,7 +117,7 @@ const forecastToday = async (apiKey, lastDisplayed) => {
     }
     try {
         const response1 = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
+            `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
         );
         //hämtar ut mer data från api:n och en bild och sätter in dem längre in dem under listan
         const data1 = await response1.json();
@@ -186,7 +186,7 @@ const arrowDown2 = document.getElementById('down-arrow-2');
 const forecastTomorrow = async (apiKey, lastDisplayed) => {
     try {
         const response = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
+            `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
         );
         //hämtar data för imorgon från api:n och lägger in dem i containern
         const data = await response.json();
@@ -280,7 +280,7 @@ const arrowDown3 = document.getElementById('down-arrow-3');
 const forecastDayAfterTomorrow = async (apiKey, lastDisplayed) => {
     try {
         const response = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
+            `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lastDisplayed}&days=3&lang=sv`
         );
         const data = await response.json();
         //hämtar data för dagen efter imorgon från api:n och lägger in i prognos containern
