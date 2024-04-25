@@ -318,7 +318,7 @@ async function getHomeCity() {
   try {
   const city = localStorage.getItem("homeCity");
   const response = await fetch(
-    `s://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
+    `https://api.weatherapi.com/v1/current.json?key=c16f3924032646cc966121030233110&q=${city}&lang=sv`
   );
   const data = await response.json();
 
